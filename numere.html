@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset = "utf-8">		
+		<script type = "text/javascript">
+      function firstNonRepeating(arr, n)
+{
+    const mp = new Map();
+    for (var i = 0; i< n; i++)
+    {
+        if(mp.has(arr[i]))
+        mp.set(arr[i], mp.get(arr[i]) + 1);
+        else
+        mp.set(arr[i],1);
+         
+    }
+    for (var x of mp.keys())
+    {    
+         
+        if (mp.get(x) == 1)
+          document.write(x+" ");  
+    }  
+}
+    var arr = [10, 15, 25, 10, 15, 30, 26 ,29 ,30 , 58, 57, 58, 63, 27, 26, 42, 98, 53 , 98, 12];
+    var n = arr.length;
+    firstNonRepeating(arr, n);
+	</script>
+    </head>
+</html>
